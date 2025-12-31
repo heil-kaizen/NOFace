@@ -1,0 +1,100 @@
+{
+  "colorScheme": "dark",
+  "fonts": [
+    {
+      "family": "Space Mono",
+      "count": 54
+    },
+    {
+      "family": "monospace",
+      "count": 50
+    },
+    {
+      "family": "sans-serif",
+      "count": 27
+    },
+    {
+      "family": "Orbitron",
+      "count": 23
+    },
+    {
+      "family": "Noto Sans JP",
+      "count": 4
+    }
+  ],
+  "colors": {
+    "primary": "#FFF8DF",
+    "accent": "#B6B19F",
+    "background": "#0A0A0A",
+    "textPrimary": "#0A0A0A",
+    "link": "#B6B19F"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Space Mono",
+      "heading": "Orbitron"
+    },
+    "fontStacks": {
+      "body": [
+        "Space Mono",
+        "monospace"
+      ],
+      "heading": [
+        "Orbitron",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Orbitron",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "192px",
+      "h2": "36px",
+      "body": "30px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "0px"
+  },
+  "components": {
+    "input": {
+      "background": "transparent",
+      "textColor": "#FFF8DF",
+      "borderColor": null,
+      "borderRadius": "0px",
+      "borderRadiusCorners": {
+        "topLeft": "0px",
+        "topRight": "0px",
+        "bottomRight": "0px",
+        "bottomLeft": "0px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": null,
+    "favicon": "File saved at: attached_assets/favicon.svg",
+    "ogImage": "File saved at: attached_assets/ogImage.png"
+  },
+  "__framework_hints": [],
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "LLM failed"
+    },
+    "secondary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "LLM failed"
+    },
+    "confidence": 0
+  },
+  "confidence": {
+    "buttons": 0,
+    "colors": 0,
+    "overall": 0
+  }
+}
