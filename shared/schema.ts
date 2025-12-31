@@ -1,18 +1,22 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, timestamp, boolean } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+export const cardRequests = pgTable("card_requests", {
+  id: serial("id").primaryKey(),
+  amount: integer("amount").notNull(),
+  tokenAmount: integer("token_amount").notNull(),
+  status: text("status", { enum: ["pending", "active", "expired"] }).default("pending").notNull(),
+  cardNumber: text("card_number"), // Partial/masked for demo
+  createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
+export const insertCardRequestSchema = createInsertSchema(cardRequests).pick({
+  amount: true,
+  tokenAmount: true,
 });
 
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+export type InsertCardRequest = z.infer<typeof insertCardRequestSchema>;
+export type CardRequest = typeof cardRequests.$inferSelect;
+
+export type CreateCardResponse = CardRequest;
